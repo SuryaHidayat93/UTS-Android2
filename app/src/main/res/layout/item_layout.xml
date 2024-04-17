@@ -1,0 +1,89 @@
+<!-- item_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Kolom Kelas dan Nama -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas"
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:layout_marginStart="30dp"/>
+
+        <!-- Kolom Progress, Semester -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress"
+            android:layout_marginStart="70dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:layout_marginStart="70dp"/>
+    </LinearLayout>
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Isi konten -->
+        <!-- Anda dapat menyesuaikan tata letak dan penempatan data sesuai kebutuhan Anda -->
+        <TextView
+            android:id="@+id/textKelas"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textNama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:textSize="16sp"
+            android:text="Abdul"
+            />
+
+        <TextView
+            android:id="@+id/textProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="90dp"
+            android:textSize="16sp"
+            android:text="50%"
+            />
+
+        <TextView
+            android:id="@+id/textSemester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"
+            android:text="5"
+            android:layout_marginEnd="60dp"/>
+    </LinearLayout>
+</LinearLayout>

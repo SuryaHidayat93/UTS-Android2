@@ -1,0 +1,28 @@
+<!-- dropdown_menu.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Daftar item dropdown -->
+    <TextView
+        android:id="@+id/item1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item 1"
+        android:padding="16dp"
+        android:clickable="true"
+        android:onClick="onDropdownItemSelected" />
+
+    <TextView
+        android:id="@+id/item2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item 2"
+        android:padding="16dp"
+        android:clickable="true"
+        android:onClick="onDropdownItemSelected" />
+
+    <!-- Tambahkan item dropdown lainnya jika diperlukan -->
+
+</LinearLayout>

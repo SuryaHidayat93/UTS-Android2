@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page1Dosen">
+
+<RelativeLayout
+    android:id="@+id/Navbar"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_marginTop="0dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sidebar"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIMHATIF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    
+    <RelativeLayout
+        android:id="@+id/Profil"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profile_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/user"
+            android:padding="8dp"
+            />
+
+
+
+
+</RelativeLayout>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@id/search"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/Navbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:padding="8dp"
+        android:background="@drawable/searchbox">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/search"
+            android:hint="Cari Nama"
+            android:inputType="text"
+            android:background="@null"/>
+
+
+
+</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/search"
+        android:layout_marginTop="30dp">
+
+        <!-- Kolom Kelas dan Nama -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas"
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:layout_marginStart="30dp"/>
+
+        <!-- Kolom Progress, Semester -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress"
+            android:layout_marginStart="70dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:layout_marginStart="70dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"/>
+</RelativeLayout>
