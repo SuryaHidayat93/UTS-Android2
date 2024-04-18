@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="select">Surah</string>
+    <string name="app_name"></string>
+    <string name="select">
+
+    </string>
 
 </resources>

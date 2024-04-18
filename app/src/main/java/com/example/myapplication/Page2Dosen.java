@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,5 +25,15 @@ public class Page2Dosen extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MyAdapter2(getApplicationContext(),items2));
+
+        View btninput = findViewById(R.id.btninput);
+        btninput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Ketika tombolSignIn ditekan, pindah ke Page1Dosen
+                Intent intent = new Intent(Page2Dosen.this, Page3Dosen.class);
+                startActivity(intent);
+            }
+        });
     }
 }
