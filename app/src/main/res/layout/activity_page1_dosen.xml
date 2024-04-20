@@ -125,4 +125,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header"/>
+
+    <LinearLayout
+        android:id="@+id/sidebar_layout"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/x"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="20dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btnhome"
+            android:backgroundTint="@color/white"/>
+        <!-- Isi sidebar -->
+    </LinearLayout>
 </RelativeLayout>

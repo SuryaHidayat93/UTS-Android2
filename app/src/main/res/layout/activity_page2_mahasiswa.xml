@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page2Mahasiswa">
+
+    <RelativeLayout
+        android:id="@+id/Navbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="0dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sidebar"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIMHATIF"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:id="@+id/Profil"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_profile_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/user"
+                android:padding="8dp"
+                />
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/arrowback"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/Navbar"
+        android:src="@drawable/arrowleft"
+        android:background="@color/white"
+        android:layout_marginLeft="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/UserProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Navbar"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/Userbox"
+            android:layout_width="111dp"
+            android:layout_height="111dp"
+            android:src="@drawable/userbox"/>
+
+        <TextView
+            android:id="@+id/Namauser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Userbox"
+            android:text="Abdul"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/nimuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/Namauser"
+            android:text="12250111849"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/UserProfil"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        >
+
+        <ProgressBar
+            android:id="@+id/progressbar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="209dp"
+            android:layout_height="23dp"
+            android:progressDrawable="@drawable/custom_progress_bar" />
+
+        <ProgressBar
+            android:id="@+id/progressbar2"
+            android:layout_below="@+id/progressbar1"
+            android:layout_marginTop="14dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="209dp"
+            android:layout_height="23dp"
+            android:progressDrawable="@drawable/custom_progress_bar" />
+
+        <ProgressBar
+            android:id="@+id/progressbar3"
+            android:layout_below="@+id/progressbar2"
+            android:layout_marginTop="14dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="209dp"
+            android:layout_height="23dp"
+            android:progressDrawable="@drawable/custom_progress_bar" />
+
+        <ProgressBar
+            android:id="@+id/progressbar4"
+            android:layout_below="@+id/progressbar3"
+            android:layout_marginTop="14dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="209dp"
+            android:layout_height="23dp"
+            android:progressDrawable="@drawable/custom_progress_bar" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/text1"
+        android:layout_below="@+id/UserProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/progress"
+        android:layout_alignBaseline="@+id/progress"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/KP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kerja Praktek"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/SKP"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/KP"
+            android:layout_height="wrap_content"
+            android:text="Seminar KP"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/SP"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/SKP"
+            android:layout_height="wrap_content"
+            android:text="Sempro"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/SH"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_below="@+id/SP"
+            android:layout_height="wrap_content"
+            android:text="Seminar Hasil"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
