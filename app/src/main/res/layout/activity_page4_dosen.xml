@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Page2Dosen">
+    tools:context=".Page4Dosen">
 
     <RelativeLayout
         android:id="@+id/Navbar"
@@ -53,7 +53,14 @@
         </RelativeLayout>
 
     </RelativeLayout>
-
+    <ImageButton
+        android:id="@+id/arrowback"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/Navbar"
+        android:src="@drawable/arrowleft"
+        android:background="@color/white"
+        android:layout_marginLeft="10dp"/>
 
     <RelativeLayout
         android:id="@+id/UserProfil"
@@ -78,94 +85,113 @@
             android:layout_centerHorizontal="true"/>
 
         <TextView
+            android:id="@+id/nimuser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/Namauser"
             android:text="12250111849"/>
     </RelativeLayout>
-    
+
+<RelativeLayout
+    android:id="@+id/progress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/UserProfil"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    >
+
+    <ProgressBar
+        android:id="@+id/progressbar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="209dp"
+        android:layout_height="23dp"
+        android:progressDrawable="@drawable/custom_progress_bar" />
+
+    <ProgressBar
+        android:id="@+id/progressbar2"
+        android:layout_below="@+id/progressbar1"
+        android:layout_marginTop="14dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="209dp"
+        android:layout_height="23dp"
+        android:progressDrawable="@drawable/custom_progress_bar" />
+
+    <ProgressBar
+        android:id="@+id/progressbar3"
+        android:layout_below="@+id/progressbar2"
+        android:layout_marginTop="14dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="209dp"
+        android:layout_height="23dp"
+        android:progressDrawable="@drawable/custom_progress_bar" />
+
+    <ProgressBar
+        android:id="@+id/progressbar4"
+        android:layout_below="@+id/progressbar3"
+        android:layout_marginTop="14dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="209dp"
+        android:layout_height="23dp"
+        android:progressDrawable="@drawable/custom_progress_bar" />
+
+
+</RelativeLayout>
+
     <RelativeLayout
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:id="@+id/text1"
         android:layout_below="@+id/UserProfil"
-        android:layout_marginTop="20dp">
-        
-<!--        <Button-->
-<!--            android:layout_width="182dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:background="@drawable/buttonpage2dosen"-->
-<!--            />-->
-
-        <ImageButton
-            android:id="@+id/btninput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/menuitem"
-            android:background="@color/white"/>
-
-        <ImageButton
-            android:id="@+id/btnstatistik"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/menuitem1"
-            android:background="@color/white"
-            android:layout_alignParentEnd="true"/>
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:text="DAFTAR SETORAN"
-        android:fontFamily="sans-serif-black"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/progress"
+        android:layout_alignBaseline="@+id/progress"
+        android:layout_alignParentStart="true">
 
-    
-    <RelativeLayout
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text2">
-        
         <TextView
-            android:id="@+id/text3"
+            android:id="@+id/KP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama Surah"
-            android:textColor="@color/grey"
+            android:text="Kerja Praktek"
             android:textStyle="normal"
-            android:layout_marginLeft="7dp"/>
+            android:layout_centerHorizontal="true"/>
 
         <TextView
-            android:id="@+id/text4"
+            android:id="@+id/SKP"
             android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/KP"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/text3"
-            android:text="Tanggal Setoran"
-            android:textColor="@color/grey"
-            android:layout_marginLeft="70dp"/>
+            android:text="Seminar KP"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"/>
 
         <TextView
+            android:id="@+id/SP"
             android:layout_width="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/SKP"
             android:layout_height="wrap_content"
-            android:text="Status"
-            android:textColor="@color/grey"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="20dp"/>
+            android:text="Sempro"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/SH"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_below="@+id/SP"
+            android:layout_height="wrap_content"
+            android:text="Seminar Hasil"
+            android:textStyle="normal"
+            android:layout_centerHorizontal="true"/>
+
 
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/header"/>
+
 
 
 

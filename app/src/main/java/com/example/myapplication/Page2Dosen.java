@@ -35,5 +35,15 @@ public class Page2Dosen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        View btnstatistik = findViewById(R.id.btnstatistik);
+        btnstatistik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Page2Dosen.this, Page4Dosen.class);
+                startActivity(intent);
+            }
+        });
     }
 }
