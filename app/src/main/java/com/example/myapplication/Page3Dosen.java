@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -71,7 +72,19 @@ public class Page3Dosen extends AppCompatActivity {
                 String status = adapterView.getItemAtPosition(i).toString();
                 Toast.makeText(Page3Dosen.this,"Status: "+status,Toast.LENGTH_SHORT).show();
             }
-        }));
+
+        }
+        ));
+
+        View btnback = findViewById(R.id.arrowback);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Page3Dosen.this, Page2Dosen.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private ArrayList<String> generateDateOptionsList() {
