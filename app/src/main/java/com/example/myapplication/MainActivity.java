@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Ketika tombolSignIn ditekan, pindah ke Page1Dosen
-                Intent intent = new Intent(MainActivity.this, Page1Mahasiswa.class);
+                Intent intent = new Intent(MainActivity.this, Page1Dosen.class);
                 startActivity(intent);
             }
         });

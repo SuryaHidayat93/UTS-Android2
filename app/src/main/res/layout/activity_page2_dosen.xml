@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+    android:id="@+id/content_layout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +14,7 @@
         >
 
         <ImageView
-            android:id="@+id/sidebar"
+            android:id="@+id/btnsidebar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/sidebar"
@@ -169,7 +169,30 @@
         android:layout_below="@+id/header"/>
 
 
+    <LinearLayout
+        android:id="@+id/sidebar_layout"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/white">
 
+        <ImageButton
+            android:id="@+id/closesidebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/x"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="20dp"/>
+
+        <ImageButton
+            android:id="@+id/btnhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btnhome"
+            android:backgroundTint="@color/white"/>
+        <!-- Isi sidebar -->
+    </LinearLayout>
 
 
 

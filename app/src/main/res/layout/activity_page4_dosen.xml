@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/content_layout"
     tools:context=".Page4Dosen">
 
     <RelativeLayout
@@ -14,6 +15,7 @@
         >
 
         <ImageView
+            android:id="@+id/btnsidebar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/sidebar"
@@ -191,7 +193,30 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/sidebar_layout"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/white">
 
+        <ImageButton
+            android:id="@+id/closesidebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/x"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="20dp"/>
+
+        <ImageButton
+            android:id="@+id/btnhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btnhome"
+            android:backgroundTint="@color/white"/>
+        <!-- Isi sidebar -->
+    </LinearLayout>
 
 
 

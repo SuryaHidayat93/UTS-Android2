@@ -2,15 +2,26 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Page4Dosen extends AppCompatActivity {
+
+    private RelativeLayout contentLayout;
+    private LinearLayout sidebarLayout;
+    private boolean isSidebarVisible = false;
+    private Animation slideAndShrinkInAnimation;
+    private Animation slideAndShrinkOutAnimation;
 
     ProgressBar progressbar1;
     ProgressBar progressbar2;
@@ -27,11 +38,41 @@ public class Page4Dosen extends AppCompatActivity {
     int maxCounter3 = 80; // Batas counter untuk ProgressBar 3
     int maxCounter4 = 90; // Batas counter untuk ProgressBar 4
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page4_dosen);
 
+        contentLayout = findViewById(R.id.content_layout);
+        sidebarLayout = findViewById(R.id.sidebar_layout);
+        slideAndShrinkInAnimation = AnimationUtils.loadAnimation(this, R.drawable.slide_and_shrink_in);
+        slideAndShrinkOutAnimation = AnimationUtils.loadAnimation(this, R.drawable.slide_and_shrink_out);
+
+        findViewById(R.id.btnsidebar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showSidebar();
+            }
+        });
+
+        // Menambahkan onClickListener ke tombol untuk menyembunyikan sidebar
+        findViewById(R.id.closesidebar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideSidebar();
+            }
+        });
+
+        View tombolhome = findViewById(R.id.btnhome);
+        tombolhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Ketika tombolSignIn ditekan, pindah ke Page1Dosen
+                Intent intent = new Intent(Page4Dosen.this, Page1Dosen.class);
+                startActivity(intent);
+            }
+        });
         // Inisialisasi ProgressBar
         progressbar1 = findViewById(R.id.progressbar1);
         progressbar2 = findViewById(R.id.progressbar2);
@@ -53,6 +94,7 @@ public class Page4Dosen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        hideSidebar();
     }
 
     // Method untuk memulai ProgressBar
@@ -83,5 +125,19 @@ public class Page4Dosen extends AppCompatActivity {
 
         // Menjadwalkan TimerTask untuk dijalankan dengan interval yang telah dihitung
         t.schedule(tt, 0, interval);
+
+
+    }
+    private void showSidebar() {
+        sidebarLayout.startAnimation(slideAndShrinkInAnimation);
+        sidebarLayout.setVisibility(View.VISIBLE);
+        isSidebarVisible = true;
+    }
+
+    private void hideSidebar() {
+        sidebarLayout.startAnimation(slideAndShrinkOutAnimation);
+        sidebarLayout.setVisibility(View.GONE);
+        isSidebarVisible = false;
     }
 }
+
